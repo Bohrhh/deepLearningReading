@@ -4,6 +4,6 @@
   - [2020_HITNet](Stereo/HITNet.md) -->
 
 - [Mono](Mono/)
-<!-- 
+
   - [2019_MonoDepth2](Mono/MonoDepth2.md)
-  - [2020_MiDaS](Mono/MiDaS.md) -->
+  - [2020_MiDaS](Mono/MiDaS.md)
