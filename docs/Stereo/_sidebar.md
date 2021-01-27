@@ -5,6 +5,7 @@
 - [Stereo](Stereo/)
 
   - [2019_HD3](Stereo/HD3.md)
+  - [2020_AANet](Stereo/AANet.md)
   - [2020_HITNet](Stereo/HITNet.md)
 
 - [Mono](Mono/)
