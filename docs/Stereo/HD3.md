@@ -12,21 +12,14 @@
 
 ## 结构
 <div style="text-align: center;">
-
-![](_images/HD3_fig1.png)
-
+    <img src=Stereo/_images/HD3_fig1.png width=100%/>
 </div>
 
 ## 性能
-
 <div style="text-align: center;">
-
-![](_images/HD3_fig2.png)
-
+    <img src=Stereo/_images/HD3_fig2.png width=60%/>
 </div>
-
+  
 <div style="text-align: center;">
-
-![](_images/HD3_fig3.png)
-
+    <img src=Stereo/_images/HD3_fig3.png width=100%/>
 </div>
