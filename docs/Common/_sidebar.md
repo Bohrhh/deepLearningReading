@@ -1,5 +1,6 @@
 - [Common](Common/)
 
+  - [Training Recipe](Common/Recipe.md)
   - [Activation](Common/Activation.md)
 
 - [Detection](Detection/)
