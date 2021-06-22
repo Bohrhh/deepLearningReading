@@ -2,6 +2,7 @@
 
 - [Detection](Detection/)
 
+  - [YOLO](Detection/YOLO.md)
   - [2019_FCOS](Detection/FCOS.md)
 
 - [Stereo](Stereo/)
