@@ -49,7 +49,7 @@ $$ f(x)= \lambda \begin{cases}
 </div>
 
 ## Swish
-$$f(x)= x\ sigmoid(\beta x)$$
+<font size=5>$$f(x)= x\ sigmoid(\beta x)$$</font>
 <div style="text-align: center;">
     <img src=Common/_images/Swish.png width=80%/>
 </div>
