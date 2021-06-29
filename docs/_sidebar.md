@@ -1,5 +1,9 @@
 - [Common](Common/)
 
+  - [Training Recipe](Common/Recipe.md)
+  - [What are companies doing?](Common/Companies.md)
+  - [Activation](Common/Activation.md)
+
 - [Detection](Detection/)
 <!-- 
   - [2019_FCOS](Detection/FCOS.md) -->
