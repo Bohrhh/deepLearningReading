@@ -6,19 +6,20 @@
 
 FCOS 继承 FCN 的哲学思想，每个feature上的像素点都会预测（l,t,r,b,c)，如图1和2所示。最后会通过 NMS 对预测的结果进行过滤。在我看来，这种方式之所以产生了效果，在于两点：1，增加了正样本的比重，其中每个像素点只要在 ground ture 的 box 内部，即被作为正样本。2，增加了预测的自由度，本来 ancher based 方法只有那些在目标中心的点对检测有作用，FCOS 把这个范围扩大了，成了一个分布，基本上是距离目标中心点越远，影响越小。
 
-![](_images/FCOS_fig1.png)
+<div style="text-align: center;">
+    <img src=Detection/_images/FCOS_fig1.png width=80%/>
+</div>
+
 
 ## 结构
+
 <div style="text-align: center;">
-
-![](_images/FCOS_fig2.png)
-
+    <img src=Detection/_images/FCOS_fig2.png width=100%/>
 </div>
+
 
 ## 性能
 
 <div style="text-align: center;">
-
-![](_images/FCOS_fig3.png)
-
+    <img src=Detection/_images/FCOS_fig3.png width=100%/>
 </div>

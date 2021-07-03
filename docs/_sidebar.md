@@ -1,6 +1,6 @@
 - [Common](Common/)
 
-  - [Training Recipe](Common/Recipe.md)
+  - [<font color=#fa7855>**Training Recipe**</font>](Common/Recipe.md)
   - [What are companies doing?](Common/Companies.md)
   - [Activation](Common/Activation.md)
 
