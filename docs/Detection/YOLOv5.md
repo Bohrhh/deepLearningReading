@@ -31,9 +31,39 @@ yolov5的backbone借鉴CSPNet来提取特征。yolov5的neck借鉴PANet来做不
 </div>
 
 ## 损失函数
-- box: [CIOU loss](https://ojs.aaai.org/index.php/AAAI/article/view/6999/6853)
-- obj: binary cross entropy
-- cls: binary cross entropy
+
+#### 1. box： [CIoU loss](https://ojs.aaai.org/index.php/AAAI/article/view/6999/6853)
+发展过程
+$IoU$ ---> $GIoU$ ---> $CIoU$
+
+- **IoU(intersection over union) 为交并比**
+<div style="text-align: center;">
+    <img src=Detection/_images/YOLOv5_IoU.png width=45%/>
+</div>
+
+- **GIoU(generalized intersection over union)**  
+当目标框和预测框没有交集时，IoU为0，这种情况无法通过梯度下降来优化。为了度量目标框和预测框没有交集时的损失，提出GIoU。计算公式如下所示，正是由于将第三项作为惩罚项，在目标框和预测框没有交集的时候，优化的结果会使得预测框向目标框移动。
+$$\mathcal{L}_{GIoU}=1-IoU+\frac{|\mathcal{C}-\mathcal{B}\cup\mathcal{B}^{gt}|}{|\mathcal{C}|}$$
+其中$\mathcal{B}$为预测框，$\mathcal{B}^{gt}$为目标框，$\mathcal{C}$为$\mathcal{B}$和$\mathcal{B}^{gt}$的最小外接框(如下图虚线框所示)，$|\mathcal{C}|$的意思是矩形框的面积。
+<div style="text-align: center;">
+    <img src=Detection/_images/YOLOv5_GIoU.png width=80%/>
+</div>
+
+- **CIoU(complete intersection over union)**  
+GIoU存在的一个问题是收敛速度慢，当目标框和预测框靠近后，GIoU的第三项变成一个小量，所起到的作用也就不大了。CIoU考虑了更多的几何因素作为损失，而不仅仅是两个框之间的重叠区域。具体的
+$$\mathcal{L}_{CIoU}=1-IoU+D(\mathcal{B}, \mathcal{B}^{gt})+V(\mathcal{B}, \mathcal{B}^{gt})$$
+$$D(\mathcal{B}, \mathcal{B}^{gt})=\frac{d^2}{c^2}$$
+$$V(\mathcal{B}, \mathcal{B}^{gt})=\frac{4}{\pi^2}(arctan\frac{w^{gt}}{h^{gt}}-arctan\frac{w}{h})^2$$
+其中d和c如下图所示
+<div style="text-align: center;">
+    <img src=Detection/_images/YOLOv5_CIoU.png width=40%/>
+</div>
+
+
+
+#### 2. obj: binary cross entropy
+
+#### 3. cls: binary cross entropy
 
 ## 评估指标
 指标的含义👉[here](/Detection/?id=评估指标-ap)
