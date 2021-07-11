@@ -1,6 +1,7 @@
 # YOLOv5
 > 目标检测最强实践
 
+
 ## 数据增强
 - mosaic
 - translation
@@ -16,7 +17,6 @@ mosaic数据增强是将4张图片的内容混合成一张图片，如下图所�
 </div>
 
 
-
 ## 模型结构
 参考文献
 - YOLOv4: Optimal speed and accuracy of object detection. [arXiv 2020](https://arxiv.org/pdf/2004.10934)
@@ -29,6 +29,10 @@ yolov5的backbone借鉴CSPNet来提取特征。yolov5的neck借鉴PANet来做不
 <div style="text-align: center;">
     <img src=Detection/_images/YOLOv5_structure.png width=100%/>
 </div>
+
+
+## 正负样本选择
+
 
 ## 损失函数
 
@@ -59,11 +63,10 @@ $$V(\mathcal{B}, \mathcal{B}^{gt})=\frac{4}{\pi^2}(arctan\frac{w^{gt}}{h^{gt}}-a
     <img src=Detection/_images/YOLOv5_CIoU.png width=40%/>
 </div>
 
-
-
 #### 2. obj: binary cross entropy
 
 #### 3. cls: binary cross entropy
+
 
 ## 评估指标
 指标的含义👉[here](/Detection/?id=评估指标-ap)
@@ -78,6 +81,7 @@ $$V(\mathcal{B}, \mathcal{B}^{gt})=\frac{4}{\pi^2}(arctan\frac{w^{gt}}{h^{gt}}-a
 - ema
 - accumulate gradient
 - auto anchor
+
 
 ## 参考资料
 
