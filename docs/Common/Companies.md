@@ -40,7 +40,9 @@
 - (**cls** 2017 CVPR) Aggregated Residual Transformations for Deep Neural Networks
 
 ## Nvidia
+- (**seg** 2021 arxiv) SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers
 - (**stereo** 2020 arxiv) Bi3D: Stereo Depth Estimation via Binary Classifications
+- (**flow** 2018 CVPR) PWC-Net: CNNs for Optical Flow Using Pyramid, Warping, and Cost Volume
 
 ## Uber
 - (**det3D** 2021 arxiv) PLUME: Efficient 3D Object Detection from Stereo Images

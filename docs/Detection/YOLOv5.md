@@ -31,7 +31,21 @@ yolov5的backbone借鉴CSPNet来提取特征。yolov5的neck借鉴PANet来做不
 </div>
 
 
-## 正负样本选择
+## 正样本选择
+正样本就是那些负责预测回归target box的anchor box。下图中展示了不同分辨率的feature map下正样本的情况，黑色框为target box，彩色框为被选为正样本的anchor box，它的选择条件是  
+- anchor box和target box对应长宽的比例在某一范围内
+- anchor box所在的grid是与target box中心最近的3个grid
+
+<div style="text-align: center;">
+    <img src=Detection/_images/YOLOV5_positive_anchor_box.png width=100%/>
+</div>
+
+所以一个target box最多对应nl×na×3个anchor box，最少0个。其中nl（number of layers）是模型输出的feature map的个数，na（number of anchors）是每一层anchor box种类的数目（通常为3）。这种选择正样本的方式有三点需要注意  
+- 1，不保证每一个target box都有anchor box负责预测
+- 2，一个target box可以对应多个anchor box，anchor box可以来自同一层，也可以来自多个层
+- 3，一个anchor box也许会对应多个target box，物体密集的时候更是如此。
+
+这种方式，增加了正样本的数目，大大加快了模型的收敛。同时也引入了很多质量不高的anchor box和一对多的模糊定义（<font color='red'>这个是否可以仿照FCOS那样，给不同质量的anchor box赋予不同的权重</font>）。
 
 
 ## 损失函数
@@ -69,9 +83,10 @@ $$V(\mathcal{B}, \mathcal{B}^{gt})=\frac{4}{\pi^2}(arctan\frac{w^{gt}}{h^{gt}}-a
 
 
 ## 评估指标
-指标的含义👉[here](/Detection/?id=评估指标-ap)
+指标的含义👉[here](https://jonathan-hui.medium.com/map-mean-average-precision-for-object-detection-45c121a31173)
 <div style="text-align: center;">
     <img src=Detection/_images/YOLOv5_cocoAP.png width=85%/>
+    <div>图片来源https://github.com/ultralytics/yolov5</div>
 </div>
 
 
