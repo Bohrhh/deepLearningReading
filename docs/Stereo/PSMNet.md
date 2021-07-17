@@ -11,18 +11,18 @@
     <img src=Stereo/_images/PSMNet_fig1.png width=100%/>
 </div>
 
-<font color="red">其中cost volume的计算方式如下图所示，</font>将left feature和right feature沿着channel方向concat。并且沿着width方向错位移动，如$d_i=1$时，left feature第一格置为零，并将right feature右移一格。最后将这些错位的feature沿着d的维度concat，得到cost volume的维度为(n,c,d,h,w)
+#### cost volume  
+其中cost volume的计算方式如下图所示，将left feature和right feature沿着channel方向concat。并且沿着width方向错位移动，如$d_i=1$时，left feature第一格置为零，并将right feature右移一格。最后将这些错位的feature沿着d的维度concat，得到cost volume的维度为(n,c,d,h,w)
 <div style="text-align: center;">
     <img src=Stereo/_images/PSMNet_fig2.png width=100%/>
 </div>
 
-
 实现的代码如下
 ```python
 n,c,h,w = left_feature.shape
-cost = Variable(torch.FloatTensor(n, c*2, maxdisp//4,  h,  w).zero_()).cuda()
+cost = Variable(torch.FloatTensor(n, c*2, maxdisp//strides,  h,  w).zero_()).cuda()
 
-for i in range(maxdisp//4):
+for i in range(maxdisp//strides):
     if i > 0 :
         cost[:, :c, i, :,i:] = left_feature[:,:,:,i:]
         cost[:, c:, i, :,i:] = right_feature[:,:,:,:-i]

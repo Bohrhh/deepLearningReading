@@ -8,4 +8,24 @@
 
 ## 结构
 
+<div style="text-align: center;">
+    <img src=Stereo/_images/HITNet_fig1.png width=100%/>
+</div>
+
+#### Initialization
+<div style="text-align: center;">
+    <img src=Stereo/_images/HITNet_fig2.png width=70%/>
+</div>
+
+
 ## 性能
+
+#### 在sceneflow上的表现
+<div style="text-align: center;">
+    <img src=Stereo/_images/HITNet_fig3.png width=50%/>
+</div>
+
+#### 在kitti上的表现
+<div style="text-align: center;">
+    <img src=Stereo/_images/HITNet_fig4.png width=100%/>
+</div>
