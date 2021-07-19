@@ -83,7 +83,13 @@ $$V(\mathcal{B}, \mathcal{B}^{gt})=\frac{4}{\pi^2}(arctan\frac{w^{gt}}{h^{gt}}-a
 
 
 ## 评估指标
-指标的含义👉[here](https://jonathan-hui.medium.com/map-mean-average-precision-for-object-detection-45c121a31173)
+COCO的AP计算过程大致分为以下四步
+- 以间隔0.05对在0.5~0.95内采样iou阈值。
+- 在每个iou阈值下，计算PR曲线，得到AP值
+- 将所有iou阈值下的AP值取平均
+- 所有类别的AP值再取平均
+
+更具体的可以看👉[here](https://jonathan-hui.medium.com/map-mean-average-precision-for-object-detection-45c121a31173)
 <div style="text-align: center;">
     <img src=Detection/_images/YOLOv5_cocoAP.png width=85%/>
     <div>图片来源https://github.com/ultralytics/yolov5</div>
