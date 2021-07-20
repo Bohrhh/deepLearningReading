@@ -64,6 +64,9 @@
 - (**det3D** 2020 arxiv) Structure Aware Single-stage 3D Object Detection from Point Cloud
 
 ## Megvii
+- (**det2D** 2021 arxiv) YOLOX: Exceeding YOLO Series in 2021
+- (**det2D** 2021 CVPR) You Only Look One-level Feature
+- (**det2D** 2021 CVPR) OTA: Optimal Transport Assignment for Object Detection
 - (**det2D** 2020 arxiv) Joint COCO and Mapillary Workshop at ICCV 2019: COCO Instance Segmentation Challenge Track
 - (**det2D** 2018 CVPR) MegDet: A Large Mini-Batch Object Detector
 - (**det2D** 2018 ECCV) DetNet: Design Backbone for Object Detection
