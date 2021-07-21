@@ -11,6 +11,7 @@
   - [2020_AANet](Stereo/AANet.md)
   - [2019_HD3](Stereo/HD3.md)
   - [2018_PSMNet](Stereo/PSMNet.md)
+  - [2018_StereoNet](Stereo/StereoNet.md)
 
 - [Mono](Mono/)
 <!-- 
