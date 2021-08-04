@@ -22,6 +22,7 @@
 - (**cls** 2015 CVPR) Going Deeper with Convolutions
 
 ## Microsoft
+- (**track** 2021 arxiv)Learning Spatio-Temporal Transformer for Visual Tracking
 - (**det3D** 2021 arxiv) MonoGRNet: A General Framework for Monocular 3D Object Detection
 - (**det2D** 2019 CVPR) Deformable ConvNets v2: More Deformable, Better Results
 - (**cls** 2021 arxiv) Swin Transformer: Hierarchical Vision Transformer using Shifted Windows
@@ -31,6 +32,7 @@
 - (**det2D** 2015 ICCV) Fast R-CNN
 
 ## Facebook
+- (**iSeg** 2021 arxiv) Boundary IoU: Improving Object-Centric Image Segmentation Evaluation
 - (**det2D** 2020 arxiv) End-to-End Object Detection with Transformers
 - (**cls** 2020 arxiv) Designing Network Design Spaces
 - (**det3D** 2019 ICCV) Deep Hough Voting for 3D Object Detection in Point Clouds
