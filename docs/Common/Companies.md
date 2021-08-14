@@ -57,6 +57,7 @@
 - (**stereo** 2019 arxiv) Learning Depth with Convolutional Spatial Propagation Network
 
 ## Huawei
+- (**det3D** 2021 arxiv)One Million Scenes for Autonomous Driving: ONCE Dataset
 - (**lane** 2021 arxiv) Focus on Local: Detecting Lane Marker from Bottom Up via Key Point
 - (**lane** 2020 arxiv) CurveLane-NAS: Unifying Lane-Sensitive Architecture Search and Adaptive Point Blending
 - (**cls** 2020 CVPR) GhostNet: More Features from Cheap Operations
