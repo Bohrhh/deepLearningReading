@@ -4,6 +4,7 @@
 
   - [YOLOv5](Detection/YOLOv5.md)
   - [2019_FCOS](Detection/FCOS.md)
+  - [PPOCR](Detection/PPOCR.md)
   
 - [Stereo](Stereo/)
 
